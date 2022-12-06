@@ -34,7 +34,7 @@ body.home {
   padding: 0;
   height: auto;
   object-fit: cover;
-  margin-top: -10vw;
+  padding-top: -10vw;
 }
 
 .wp-custom-header-video-play {
@@ -94,6 +94,11 @@ body.home {
   color: white;
 }
 
-p {
-  color: red;
+#menu-top-menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+li.menu-item {
+  margin: 20px 20px;
 }
