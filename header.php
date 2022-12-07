@@ -15,14 +15,16 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'twentytwentyone' ); ?></a>
 
-	<nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
+	<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light" role="navigation">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
 	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
     <span class="navbar-toggler-icon"></span>
 </button>
     </button>
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><?php the_custom_logo() ?> </a>
+
+
         <?php
         wp_nav_menu( array(
             'theme_location'    => 'top-menu',
@@ -41,6 +43,7 @@
       </form>
     </div>
 </nav>
+<div class="custom-header-media">
 
 	<div id="content" class="site-content">
 		<div id="primary" class="content-area">

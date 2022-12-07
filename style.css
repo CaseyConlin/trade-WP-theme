@@ -94,11 +94,22 @@ body.home {
   color: white;
 }
 
-#menu-top-menu {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
+.navbar {
+  height: 40px;
+  z-index: 1;
+  margin-top: 20px;
 }
-li.menu-item {
-  margin: 20px 20px;
+
+.navbar .container {
+  height: 30px;
+  z-index: 1;
+}
+.navbar-brand {
+  width: 20%;
+  transition: all 0.3s ease-in-out;
+  overflow: visible;
+}
+.navbar-brand img {
+  width: 100%;
+  height: auto;
 }
