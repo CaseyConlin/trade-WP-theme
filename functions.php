@@ -2,9 +2,7 @@
 
 
 add_theme_support( 'custom-header', array(
- 'video' => true,
- 'custom-logo' => true
-    
+ 'video' => true,    
 ) ); 
 
 add_filter( 'header_video_settings', 'my_header_video_settings');
@@ -36,39 +34,54 @@ function themename_custom_logo_setup() {
 	add_theme_support( 'custom-logo', $defaults );
 }
 
-add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
+  add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
 
 
 
 function enqueue_load_fa() {
     wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css' );
   }
-  
+
   add_action( 'wp_enqueue_scripts', 'enqueue_load_fa');
   
 
+
+
 function wpdocs_theme_name_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	// wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/trade-theme.js', array(), false, true);
   
-	wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/trade-theme.js', array(), false, true);
 }
 
-add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
+  add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
 
-function hook_header_js() {
-	wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/trade-theme.js');
-}
+  function enqueue_webpack_scripts() {
+  
+    $cssFilePath = glob( get_template_directory() . '/css/build/main.min.*.css' );
+    $cssFileURI = get_template_directory_uri() . '/css/build/' . basename($cssFilePath[0]);
+    wp_enqueue_style( 'main_css', $cssFileURI );
+    
+    $jsFilePath = glob( get_template_directory() . '/js/build/main.min.*.js' );
+    $jsFileURI = get_template_directory_uri() . '/js/build/' . basename($jsFilePath[0]);
+    wp_enqueue_script( 'main_js', $jsFileURI , null , null , true );
+      
+  }
+  add_action( 'wp_enqueue_scripts', 'enqueue_webpack_scripts' );
 
-add_action( 'wp_footer', 'hook_header_js' );
+
 
 function trade_theme_top_menu() {
   register_nav_menu('top-menu', ( 'Top Menu' ));
 }
-add_action( 'init', 'trade_theme_top_menu' );
+
+  add_action( 'init', 'trade_theme_top_menu' );
+
+
 
 function register_navwalker(){
 	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 }
+
 add_action( 'after_setup_theme', 'register_navwalker' );
 
 add_filter( 'nav_menu_link_attributes', 'prefix_bs5_dropdown_data_attribute', 20, 3 );
