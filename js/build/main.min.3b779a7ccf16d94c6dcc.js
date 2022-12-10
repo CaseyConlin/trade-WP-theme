@@ -21,7 +21,15 @@ var __webpack_exports__ = {};
 /*!************************!*\
   !*** ./js/src/main.js ***!
   \************************/
-
+const navSearchButton = document.querySelector(".search-button");
+const searchButtonHandler = e => {
+  const navField = document.querySelector(".search-in-nav");
+  if (!navField.classList.contains("search-in-nav-show")) {
+    e.preventDefault();
+    navField.classList.toggle("search-in-nav-show");
+  }
+};
+navSearchButton.addEventListener("click", searchButtonHandler);
 })();
 
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
@@ -37,4 +45,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.min.7c7f11274b0de6b94eeb.js.map
+//# sourceMappingURL=main.min.3b779a7ccf16d94c6dcc.js.map

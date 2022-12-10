@@ -124,9 +124,20 @@ body.home {
   height: 30px;
 }
 
-.d-flex .btn {
-  justify-content: center;
-  align-self: center;
+.search-button {
+  border-radius: 50%;
 }
 
-/*# sourceMappingURL=main.min.7c7f11274b0de6b94eeb.css.map*/
+.search-in-nav {
+  padding: 0;
+  margin: 0;
+  width: 0;
+  border: 0;
+}
+
+.search-in-nav-show {
+  transition: width 1s;
+  width: 200px;
+}
+
+/*# sourceMappingURL=main.min.3b779a7ccf16d94c6dcc.css.map*/
