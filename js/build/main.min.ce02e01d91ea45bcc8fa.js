@@ -30,6 +30,23 @@ const searchButtonHandler = e => {
   }
 };
 navSearchButton.addEventListener("click", searchButtonHandler);
+const navBar = document.querySelector(".navbar");
+const customHeader = document.querySelector("#wp-custom-header");
+const navBarStick = () => {
+  console.log(window.scrollY);
+  if (window.scrollY > 19) {
+    navBar.classList.add("sticky-top");
+    navBar.classList.remove("navbar-push-down");
+    customHeader.classList.add("header-sticky-offset");
+  } else {
+    navBar.classList.remove("sticky-top");
+    navBar.classList.add("navbar-push-down");
+    customHeader.classList.remove("header-sticky-offset");
+  }
+};
+if (document.querySelector(".home")) {
+  window.onscroll = navBarStick;
+}
 })();
 
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
@@ -45,4 +62,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.min.3b779a7ccf16d94c6dcc.js.map
+//# sourceMappingURL=main.min.ce02e01d91ea45bcc8fa.js.map
