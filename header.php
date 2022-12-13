@@ -23,7 +23,7 @@
     <span class="navbar-toggler-icon"></span>
 </button>
     </button>
-    <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><?php the_custom_logo() ?> </a>
+   <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><?php the_custom_logo() ?> </a>
 
 
         <?php

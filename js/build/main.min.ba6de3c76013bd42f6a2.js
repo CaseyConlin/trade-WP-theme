@@ -32,15 +32,18 @@ const searchButtonHandler = e => {
 navSearchButton.addEventListener("click", searchButtonHandler);
 const navBar = document.querySelector(".navbar");
 const customHeader = document.querySelector("#wp-custom-header");
+const navLogo = document.querySelector(".navbar-brand");
 const navBarStick = () => {
   console.log(window.scrollY);
   if (window.scrollY > 19) {
     navBar.classList.add("sticky-top");
     navBar.classList.remove("navbar-push-down");
+    navLogo.classList.add("logo-sticky-top");
     customHeader.classList.add("header-sticky-offset");
   } else {
     navBar.classList.remove("sticky-top");
     navBar.classList.add("navbar-push-down");
+    navLogo.classList.remove("logo-sticky-top");
     customHeader.classList.remove("header-sticky-offset");
   }
 };
@@ -62,4 +65,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.min.ce02e01d91ea45bcc8fa.js.map
+//# sourceMappingURL=main.min.ba6de3c76013bd42f6a2.js.map

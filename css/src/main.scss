@@ -104,13 +104,11 @@ body.home {
 
 .navbar-push-down {
   margin-top: 20px;
-  transition: all 0.8s ease-in-out;
   position: absolute;
   width: 100%;
 }
 
 .navbar .sticky-top {
-  transition: all 0.8s ease-in-out;
 }
 
 .navbar .container {
@@ -118,11 +116,17 @@ body.home {
   z-index: 1;
 }
 .navbar-brand {
-  width: 18%;
-  transition: all s ease-in-out;
+  width: 230px;
+  transition: all 0.5s ease-in;
   overflow: visible;
-  margin-right: 5%;
+  margin-right: 65px;
 }
+.logo-sticky-top {
+  transition: all 0.5s ease-in;
+  width: 150px;
+  margin-right: 145px;
+}
+
 .navbar-brand img {
   width: 100%;
   height: auto;
@@ -146,4 +150,9 @@ body.home {
 .search-in-nav-show {
   transition: width 1s;
   width: 200px;
+}
+
+.dropdown-menu {
+  border: 0;
+  border-radius: 0px;
 }
