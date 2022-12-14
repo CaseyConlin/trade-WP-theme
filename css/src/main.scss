@@ -115,16 +115,25 @@ body.home {
   height: 45px;
   z-index: 1;
 }
+
 .navbar-brand {
-  width: 230px;
-  transition: all 0.5s ease-in;
-  overflow: visible;
-  margin-right: 65px;
+  width: 25%;
 }
 .logo-sticky-top {
-  transition: all 0.5s ease-in;
-  width: 150px;
-  margin-right: 145px;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar-brand {
+    width: 230px;
+    transition: all 0.5s ease-in;
+    overflow: visible;
+    margin-right: 65px;
+  }
+  .logo-sticky-top {
+    transition: all 0.5s ease-in;
+    width: 150px;
+    margin-right: 145px;
+  }
 }
 
 .navbar-brand img {
@@ -146,13 +155,15 @@ body.home {
   width: 0;
   border: 0;
 }
-
-.search-in-nav-show {
-  transition: width 1s;
-  width: 200px;
+@media only screen and (min-width: 992px) {
+  .search-in-nav-show {
+    transition: width 1s;
+    width: 200px;
+  }
 }
 
 .dropdown-menu {
   border: 0;
   border-radius: 0px;
 }
+// 576px, 768px, 992px, and 1200px
