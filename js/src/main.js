@@ -1,10 +1,12 @@
 const navSearchButton = document.querySelector(".search-button");
+const searchField = document.querySelector(".form-control");
 
 const searchButtonHandler = (e) => {
   const navField = document.querySelector(".search-in-nav");
   if (!navField.classList.contains("search-in-nav-show")) {
     e.preventDefault();
     navField.classList.toggle("search-in-nav-show");
+    searchField.focus();
   }
 };
 navSearchButton.addEventListener("click", searchButtonHandler);

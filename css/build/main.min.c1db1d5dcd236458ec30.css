@@ -32,7 +32,6 @@ body.home {
 
 #wp-custom-header-video {
   width: 100%;
-  height: 35vw;
   height: auto;
   object-fit: cover;
   padding-top: -10vw;
@@ -122,12 +121,12 @@ body.home {
 @media only screen and (min-width: 768px) {
   .navbar-brand {
     width: 230px;
-    transition: all 0.5s ease-in;
+    transition: all 0.7s ease-in-out;
     overflow: visible;
     margin-right: 65px;
   }
   .logo-sticky-top {
-    transition: all 0.5s ease-in;
+    transition: all 0.7s ease-in-out;
     width: 150px;
     margin-right: 145px;
   }
@@ -152,6 +151,10 @@ body.home {
   border: 0;
 }
 
+.form-control {
+  padding-left: 10px;
+}
+
 @media only screen and (min-width: 992px) {
   .search-in-nav-show {
     transition: width 1s;
@@ -163,4 +166,13 @@ body.home {
   border-radius: 0px;
 }
 
-/*# sourceMappingURL=main.min.731e855fb2fe0aa7dee0.css.map*/
+.site-footer .site-logo {
+  width: 20%;
+}
+
+.custom-logo-link img {
+  width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=main.min.c1db1d5dcd236458ec30.css.map*/

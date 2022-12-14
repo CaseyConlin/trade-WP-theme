@@ -22,11 +22,13 @@ var __webpack_exports__ = {};
   !*** ./js/src/main.js ***!
   \************************/
 const navSearchButton = document.querySelector(".search-button");
+const searchField = document.querySelector(".form-control");
 const searchButtonHandler = e => {
   const navField = document.querySelector(".search-in-nav");
   if (!navField.classList.contains("search-in-nav-show")) {
     e.preventDefault();
     navField.classList.toggle("search-in-nav-show");
+    searchField.focus();
   }
 };
 navSearchButton.addEventListener("click", searchButtonHandler);
@@ -65,4 +67,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.min.731e855fb2fe0aa7dee0.js.map
+//# sourceMappingURL=main.min.c1db1d5dcd236458ec30.js.map
