@@ -110,7 +110,7 @@ body.home {
   // }
 
   .navbar .container {
-    height: 45px;
+    height: 55px;
     z-index: 1;
   }
 
@@ -121,7 +121,14 @@ body.home {
   // }
 }
 
+.navbar-brand {
+  width: 40%;
+}
+
 @media only screen and (min-width: 992px) {
+  .navbar .container {
+    height: 45px;
+  }
   .navbar-brand {
     width: 230px;
     transition: all 0.7s ease-in-out;
@@ -139,9 +146,11 @@ body.home {
   width: 100%;
   height: auto;
 }
+
 .navbar-search {
-  display: none;
+  // display: none !important;
 }
+
 @media only screen and (min-width: 768px) {
   .navbar-search {
     height: 30px;
@@ -162,6 +171,7 @@ body.home {
     padding-left: 10px;
   }
 }
+
 @media only screen and (min-width: 992px) {
   .search-in-nav-show {
     transition: width 1s;

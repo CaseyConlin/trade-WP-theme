@@ -109,14 +109,21 @@ body.home {
     width: 100%;
   }
   .navbar .container {
-    height: 45px;
+    height: 55px;
     z-index: 1;
   }
   .navbar-brand {
     width: 25%;
   }
 }
+.navbar-brand {
+  width: 40%;
+}
+
 @media only screen and (min-width: 992px) {
+  .navbar .container {
+    height: 45px;
+  }
   .navbar-brand {
     width: 230px;
     transition: all 0.7s ease-in-out;
@@ -132,10 +139,6 @@ body.home {
 .navbar-brand img {
   width: 100%;
   height: auto;
-}
-
-.navbar-search {
-  display: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -175,4 +178,4 @@ body.home {
   height: auto;
 }
 
-/*# sourceMappingURL=main.min.bff4f98be306b3174710.css.map*/
+/*# sourceMappingURL=main.min.8f72e601d988049edfbc.css.map*/

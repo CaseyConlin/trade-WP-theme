@@ -19,7 +19,7 @@
 	<nav class="navbar navbar-push-down navbar-expand-lg navbar-light bg-light" role="navigation">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
-	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
+	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bs-navbar-collapse-1" aria-controls="bs-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
     <span class="navbar-toggler-icon"></span>
 </button>
     </button>
@@ -32,16 +32,18 @@
             'depth'             => 2,
             'container'         => 'div',
             'container_class'   => 'collapse navbar-collapse',
-            'container_id'      => 'bs-example-navbar-collapse-1',
+            'container_id'      => 'bs-navbar-collapse-1',
             'menu_class'        => 'nav navbar-nav',
             'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
             'walker'            => new WP_Bootstrap_Navwalker(),
         ) );
         ?>
-		<form class="navbar-search d-flex" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+        <div class = "collapse navbar-collapse" id = "bs-navbar-collapse-1" >
+		<form class="navbar-search d-flex collapse navbar-collapse" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
         <input class="form-control me-2 search-in-nav" type="search" placeholder="Search" aria-label="Search" value="<?php echo get_search_query(); ?>" name="s" id="s">
         <button class="btn btn-outline-secondary btn-sm search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
+        </div>
     </div>
 </nav>
 <div class="custom-header-media">
