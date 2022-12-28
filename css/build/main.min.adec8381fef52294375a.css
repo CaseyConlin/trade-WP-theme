@@ -106,6 +106,10 @@ body.home {
   color: white;
 }
 
+.navbar-brand {
+  width: 40%;
+}
+
 @media only screen and (min-width: 768px) {
   .navbar {
     height: 45px;
@@ -124,10 +128,6 @@ body.home {
     width: 25%;
   }
 }
-.navbar-brand {
-  width: 40%;
-}
-
 @media only screen and (min-width: 992px) {
   .navbar .container {
     height: 45px;
@@ -187,4 +187,4 @@ body.home {
   height: auto;
 }
 
-/*# sourceMappingURL=main.min.008c4088b471e32d61b5.css.map*/
+/*# sourceMappingURL=main.min.adec8381fef52294375a.css.map*/

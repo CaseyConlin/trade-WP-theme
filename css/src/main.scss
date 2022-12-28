@@ -104,6 +104,11 @@ body.home {
   background-color: black;
   color: white;
 }
+
+.navbar-brand {
+  width: 40%;
+}
+
 @media only screen and (min-width: 768px) {
   .navbar {
     height: 45px;
@@ -124,10 +129,6 @@ body.home {
   .navbar-brand {
     width: 25%;
   }
-}
-
-.navbar-brand {
-  width: 40%;
 }
 
 @media only screen and (min-width: 992px) {

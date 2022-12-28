@@ -21,6 +21,7 @@ var __webpack_exports__ = {};
 /*!************************!*\
   !*** ./js/src/main.js ***!
   \************************/
+// Search button behavior
 const navSearchButton = document.querySelector(".search-button");
 const searchField = document.querySelector(".form-control");
 const searchButtonHandler = e => {
@@ -35,9 +36,12 @@ navSearchButton.addEventListener("click", searchButtonHandler);
 const navBar = document.querySelector(".navbar");
 const customHeader = document.querySelector("#wp-custom-header");
 const navLogo = document.querySelector(".navbar-brand");
+
+// Navbar sticky behavior
 const navBarStick = () => {
-  console.log(window.scrollY);
-  if (window.scrollY > 19) {
+  if (window.innerWidth < 600 && window.scrollY > 0) {
+    navBar.classList.add("sticky-top");
+  } else if (window.scrollY > 19) {
     navBar.classList.add("sticky-top");
     navBar.classList.remove("navbar-push-down");
     navLogo.classList.add("logo-sticky-top");
@@ -67,4 +71,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.min.008c4088b471e32d61b5.js.map
+//# sourceMappingURL=main.min.adec8381fef52294375a.js.map

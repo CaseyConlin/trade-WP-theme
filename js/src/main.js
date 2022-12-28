@@ -1,3 +1,4 @@
+// Search button behavior
 const navSearchButton = document.querySelector(".search-button");
 const searchField = document.querySelector(".form-control");
 
@@ -15,9 +16,11 @@ const navBar = document.querySelector(".navbar");
 const customHeader = document.querySelector("#wp-custom-header");
 const navLogo = document.querySelector(".navbar-brand");
 
+// Navbar sticky behavior
 const navBarStick = () => {
-  console.log(window.scrollY);
-  if (window.scrollY > 19) {
+  if (window.innerWidth < 600 && window.scrollY > 0) {
+    navBar.classList.add("sticky-top");
+  } else if (window.scrollY > 19) {
     navBar.classList.add("sticky-top");
     navBar.classList.remove("navbar-push-down");
     navLogo.classList.add("logo-sticky-top");
