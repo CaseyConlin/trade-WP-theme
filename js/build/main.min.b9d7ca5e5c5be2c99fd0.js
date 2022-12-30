@@ -36,12 +36,13 @@ navSearchButton.addEventListener("click", searchButtonHandler);
 const navBar = document.querySelector(".navbar");
 const customHeader = document.querySelector("#wp-custom-header");
 const navLogo = document.querySelector(".navbar-brand");
+const nav = document.querySelector(".navbar");
+const topOfNav = nav.offsetTop;
 
 // Navbar sticky behavior
 const navBarStick = () => {
-  if (window.innerWidth < 600 && window.scrollY > 0) {
-    navBar.classList.add("sticky-top");
-  } else if (window.scrollY > 19) {
+  console.log(topOfNav);
+  if (window.scrollY > topOfNav) {
     navBar.classList.add("sticky-top");
     navBar.classList.remove("navbar-push-down");
     navLogo.classList.add("logo-sticky-top");
@@ -71,4 +72,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.min.adec8381fef52294375a.js.map
+//# sourceMappingURL=main.min.b9d7ca5e5c5be2c99fd0.js.map
